@@ -14,7 +14,8 @@ function getTouches(evt) {
 function handleTouchStart(evt) {
     const firstTouch = getTouches(evt)[0];                                      
     xDown = firstTouch.clientX;                                      
-    yDown = firstTouch.clientY;                                      
+    yDown = firstTouch.clientY;  
+    $("#swipeHint").removeClass("invisible");                            
 };                                                
                                                                          
 function handleTouchMove(evt) {
