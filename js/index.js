@@ -6,6 +6,13 @@ var yDown = null;
 
 var n = 1;
 
+var showToast = true;
+
+
+$("#toastClosed").click(function (){
+    showToast = false;
+});
+
 function getTouches(evt) {
   return evt.touches ||             // browser API
          evt.originalEvent.touches; // jQuery
@@ -15,7 +22,13 @@ function handleTouchStart(evt) {
     const firstTouch = getTouches(evt)[0];                                      
     xDown = firstTouch.clientX;                                      
     yDown = firstTouch.clientY;  
-    $("#swipeHint").removeClass("invisible");                            
+
+    if(showToast){
+        var toast = new bootstrap.Toast($("#swipeToast"));
+        toast.show() 
+        showToast = false;
+    }  
+                          
 };                                                
                                                                          
 function handleTouchMove(evt) {
@@ -39,7 +52,7 @@ function handleTouchMove(evt) {
                 n++;
             }
             
-            console.log("right swipe"+n);
+            
              $(function () {
                
             
@@ -58,15 +71,15 @@ function handleTouchMove(evt) {
             
                 $("#pills-tab  li:nth-child("+n+") a").tab("show");
               })
-            console.log("left swipe")
+           
         }                       
     } else {
         if ( yDiff > 0 ) {
             /* down swipe */ 
-            console.log("swiped down")
+            
         } else { 
             /* up swipe */
-            console.log("swiped up")
+           
         }                                                                 
     }
     /* reset values */
