@@ -1,0 +1,95 @@
+.bg-color{
+    background-color: #EAD8F2;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.bg-accent-color{
+    background-color: #AF36E5;
+}
+
+
+.btn-white{
+    background-color: white;
+    color: black;
+    border: solid #AF36E5 1px;
+}
+
+.btn-white:hover{
+    background-color: #AF36E5;
+    color: white;
+    border: solid white 1px;
+}
+
+a{
+    color: black;
+}
+
+.nav-link{
+    color:black;
+   
+}
+
+.nav-link:hover{
+    color: #AF36E5;
+}
+
+.card-text{
+    font-size: .75rem;
+}
+
+.card-title{
+    font-size: .875rem;
+}
+
+.card-subtitle{
+    font-size: .75rem;
+}
+
+.nav .nav-link{
+    font-size:.875rem;
+}
+
+.card-link{
+    font-size:.75rem;
+}
+
+.card-link:hover{
+    color: #AF36E5;
+}
+
+.card-body ul li {
+    font-size: .75rem;
+}
+
+#contact-container h6 {
+    font-size: .75rem;
+}
+
+.scroll{
+   
+    width: 90px;
+    height: 90px;
+    padding: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #contact-container{
+        width: 90% !important;
+    }
+    
+    .contact-img{
+        width: 20%;
+    }
+   
+   
+
+  }
+
+
+
+
+
