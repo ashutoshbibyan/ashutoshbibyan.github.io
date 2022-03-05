@@ -36,6 +36,8 @@ a{
     color: #AF36E5;
 }
 
+/*
+
 .card-text{
     font-size: .75rem;
 }
@@ -56,10 +58,6 @@ a{
     font-size:.75rem;
 }
 
-.card-link:hover{
-    color: #AF36E5;
-}
-
 .card-body ul li {
     font-size: .75rem;
 }
@@ -67,6 +65,15 @@ a{
 #contact-container h6 {
     font-size: .75rem;
 }
+
+*/
+.card-link:hover{
+    color: #AF36E5;
+}
+
+
+
+
 
 .scroll{
    
