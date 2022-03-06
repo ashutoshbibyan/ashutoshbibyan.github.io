@@ -82,19 +82,32 @@ a{
     padding: 0px;
 }
 
+.contact-img{
+    width:  90px;
+    height: 90px;
+}
+
 @media only screen and (max-width: 600px) {
 
     #contact-container{
         width: 90% !important;
     }
     
-    .contact-img{
-        width: 30%;
-    }
+   
    
    
 
   }
+
+@media only screen and (min-width:2560px){
+
+    .contact-img{
+        width: 110px;
+       height: 110px;
+    }
+
+    
+}
 
 
 
