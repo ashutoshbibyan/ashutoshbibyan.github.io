@@ -86,3 +86,15 @@ function handleTouchMove(evt) {
     xDown = null;
     yDown = null;                                             
 };
+
+
+$('#iam').on('mouseenter',()=>{
+  
+  let modal = $("#myModal").modal('show');   
+
+
+});
+
+
+
+   
