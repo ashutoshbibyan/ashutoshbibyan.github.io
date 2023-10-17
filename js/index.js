@@ -88,11 +88,16 @@ function handleTouchMove(evt) {
 };
 
 
-$('#iam').on('mouseenter',()=>{
-  
-  let modal = $("#myModal").modal('show');   
+$('#about').on("click",(evt)=>{
+  evt.preventDefault();
+  $("#myModal").modal('show');   
 
 
+});
+
+$("#contactForm").on("click",(evt)=>{
+    evt.preventDefault();
+    $("#contactFormModal").modal('show');
 });
 
 

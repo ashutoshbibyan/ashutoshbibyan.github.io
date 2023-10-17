@@ -24,7 +24,7 @@
 }
 .btn-call-to-action:hover{
     
-    background-color: white;
+    background-color: white !important;
     color: #AF36E5;
 }
 .btn-call-to-action:active{
