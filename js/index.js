@@ -86,3 +86,20 @@ function handleTouchMove(evt) {
     xDown = null;
     yDown = null;                                             
 };
+
+
+$('#about').on("click",(evt)=>{
+  evt.preventDefault();
+  $("#myModal").modal('show');   
+
+
+});
+
+$("#contactForm").on("click",(evt)=>{
+    evt.preventDefault();
+    $("#contactFormModal").modal('show');
+});
+
+
+
+   

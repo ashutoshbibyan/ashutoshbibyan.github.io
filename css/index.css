@@ -11,6 +11,34 @@
 }
 
 
+
+.btn-call-to-action , .btn-call-to-action:link{
+   
+    background-color: #AF36E5;
+    border: #AF36E5;
+}
+
+.btn-call-to-action:visited{
+    
+    background-color: #AF36E5 !important;
+}
+.btn-call-to-action:hover{
+    
+    background-color: white !important;
+    color: #AF36E5;
+}
+.btn-call-to-action:active{
+   
+    background-color: #AF36E5;
+}
+
+
+ .btn-call-to-action:focus {
+    color: #fff;
+    background-color: #AF36E5;
+    border-color: #AF36E5;
+    box-shadow: 0 0 0 .25rem #c696dd;
+}
 .btn-white{
     background-color: white;
     color: black;
