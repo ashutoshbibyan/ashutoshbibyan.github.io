@@ -1,311 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link href="css/index.css" type="text/css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <title>Ashutosh</title>
+  <style>
+    .shadows-into-light-regular {
+      font-family: "Shadows Into Light", cursive;
+
+    }
+  </style>
+  <title>Home</title>
 </head>
 
-<body>
+<body class="scroll-smooth">
+  <nav
+    class="block w-full max-w-screen-lg px-4 py-2 mx-auto bg-white  bg-opacity-90 sticky top-3 shadow lg:px-8 lg:py-3 backdrop-blur-lg backdrop-saturate-150 z-[9999]">
+    <div class="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
+      <a href="/"
+        class="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 shadows-into-light-regular text-xl font-bold">
+        Ashutosh
+      </a>
+      <div class="hidden lg:block">
+        <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+          <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+            <a href="#work" class="flex items-center active:font-bold">Work</a>
+          </li>
+          <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+            <a href="#services" class="flex items-center">Services</a>
+          </li>
 
+          <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+            <a href="#experience" class="flex items-center">Experience</a>
+          </li>
+          <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+            <a href="#contact" class="flex items-center">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <button
+        class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
+        type="button">
+        <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </nav>
 
-  <div class="container-fluid bg-color">
+  <div class="">
+    <div
+      class="grid lg:grid-cols-12 bg-[url(/images/dev_working.jpg)]  bg-no-repeat bg-center bg-contain sm:bg-cover md:bg-cover lg:bg-contain h-screen">
+      <div class="w-full md:col-start-2 lg:col-start-1 col-span-12 md:col-span-6">
+        <div class="flex flex-col h-auto mx-6 md:h-full  mt-12 lg:mt-0 lg:justify-around gap-2 w-fit lg:mx-auto">
 
-
-
-    <nav class=" navbar bg-white fixed-top  d-none d-md-block  ">
-
-      <ul class="nav  justify-content-center">
-        <li class="nav-item "><a href="#" class="nav-link">Home </a> </li>
-        <li class="nav-item "><a id="about" href="" class="nav-link">About </a> </li>
-        <li class="nav-item "><a href="#projects" class="nav-link">Projects </a> </li>
-        <li class="nav-item "><a href="#skills" class="nav-link">Skills </a> </li>
-        <li class="nav-item "><a href="#certification" class="nav-link">Certification</a> </li>
-        <li class="nav-item "><a href="#contact" class="nav-link">Contact </a> </li>
-      </ul>
-
-    </nav>
-
-
-  </div>
-
-
-  <section class="container-fluid   bg-color">
-
-
-    <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-
-
-
-
-      <div class="row py-3 align-items-center justify-content-center">
-
-        <div class="col-md-6 ">
-
-
-          <div class="d-flex flex-column align-items-center justify-content-center justify-content-md-end ">
-
-            <h1 class="text-center">I'm A </br>Full Stack Developer</h1>
-            <a class="d-none d-md-block btn btn-primary btn-call-to-action btn-lg" href="#projects">
-              Check My Work
-            </a>
-
-          </div>
-
+          <h1 class="center text-4xl md:text-5xl lg:text-6xl  text-sky-800 font-semibold">Hey There, </br> I'm <span
+              class="">Ashutosh</span></h1>
+          <p class="text-sm font-thin lg:hidden">“I’m a Full-Stack Developer with 5 years of experience building
+            scalable and user-friendly applications. Skilled in the MEAN stack, Java, and PHP, I create efficient
+            backend systems and seamless frontend experiences. I enjoy turning ideas into functional, high-quality
+            software.”</p>
+          <h2 class="font-bold text-sky-900 hidden lg:block"><a
+              href="mailto:ashutosh2013official@gmail.com">ashutosh2013official@gmail.com</a></h2>
+          <h2 class="lg:text-4xl font-light hidden lg:block"><span class="lg:text-6xl font-bold">5</span> Year
+            Experience</h2>
         </div>
-
-
-        <div class="col-md-6 d-flex justify-content-center justify-content-md-start">
-
-          <img src="/images/banner1.png" alt="banner image" class="img-fluid w-75 d-none d-md-block">
-          <img src="/images/banner1.png" alt="banner image" class="img-fluid d-sm-block d-md-none d-lg-none">
-
-        </div>
-
+      </div>
+      <div class="col-span-12 lg:col-span-6 flex flex-col justify-center lg:justify-around ">
+        <h2 class="text-xl antialiased text-center whitespace-normal hidden lg:block "> "I create functional and beautiful
+          <br>applications and I love what i do "
+        </h2>
+        <h2 class="text-xl text-center hidden lg:block">FullStack Software Developer</h2>
 
       </div>
-      <div class="row  justify-content-center">
-
-
-        <a class="d-flex justify-content-center" href="#projects">
-          <img class="scroll d-sm-block d-md-none d-lg-none" src="/images/scroll.png" alt="scroll up" />
-        </a>
-
-
-
-
-      </div>
-
 
     </div>
+    <div id="work" class="grid  grid-cols-12 py-26  h-screen w-full ">
+
+      <h1 class="col-span-12 self-center text-center w-full text-6xl mb-12 lg:mb-0">Some Of My Work</h1>
+
+      <div class=" col-span-12  mx-12 grid grid-cols-12 gap-6 h-fit">
+        <div
+          class="  bg-sky-50 col-span-12 xl:col-start-2  md:col-span-6 lg:col-span-4 xl:col-span-2 border border-gray-300  opacity-90 shadow backdrop-blur-lg backdrop-saturate-150 z-[9999] ">
+          <video src="./video/quizzapp.mp4" class="" controls muted loop></video>
+          <div class="  p-12 ">
 
 
-
-
-
-
-  </section>
-
-
-  <section id="projects" class="container-fluid  bg-white ">
-
-    <div class="row min-vh-100 justify-content-center">
-
-
-
-
-      <div class="row justify-content-around align-items-center">
-
-
-        <div class="card-deck d-flex flex-wrap flex-lg-nowrap justify-content-around">
-
-
-    
-          <div class="card bg-color m-2" style="width: 18rem;">
-            <video src="./video/quizzapp.mp4" class="card-img-top" controls muted autoplay loop ></video>
-
-            <div class="card-body">
-              <h5 class="card-title">Quiz app</h5>
-              <h6 class="card-subtitle mb-2 text-muted">MEAN Stack</h6>
-              <p class="card-text"> This is a quiz application created using the MEAN Stack.Here you can create question
+            <div class="flex flex-col gap-2">
+              <h5 class="text-2xl">Quiz app</h5>
+              <h6 class="text-xl font-semibold">MEAN Stack</h6>
+              <p class=" whitespace-normal text-wrap antialiased "> This is a quiz application created using the MEAN
+                Stack.Here you can create question
                 for quiz
                 and also take part in quiz.
               </p>
-              <a href="https://github.com/ashutoshbibyan/quizapp" target="__blank" class="card-link">Git</a>
-              <a href="https://quizapp-cyp5.onrender.com" target="__blank" class="card-link">Live Demo</a>
+              <div class="flex gap-4">
+                <a href="https://github.com/ashutoshbibyan/quizapp" target="__blank"
+                  class="card-link bg-green-800 text-white p-2 rounded-md">Git</a>
+                <a href="https://quizapp-cyp5.onrender.com" target="__blank"
+                  class="card-link bg-green-800 text-white p-2 rounded-md">Live Demo</a>
+              </div>
             </div>
           </div>
+        </div>
 
-           <div class="card bg-color m-2" style="width: 18rem;">
-            <video src="./video/quizzapp.mp4" class="card-img-top" controls muted autoplay loop ></video>
 
-            <div class="card-body">
-              <h5 class="card-title">StoreFront App</h5>
-              <h6 class="card-subtitle mb-2 text-muted">MEAN Stack</h6>
-              <p class="card-text"> This is a point of sale application for a store.   </p>
-              <a href="https://github.com/ashutoshbibyan/storefront_api" target="__blank" class="card-link">Git</a>
-              <a href="https://storefront-so4w.onrender.com" target="__blank" class="card-link">Live Demo</a>
+        <div
+          class="bg-sky-50 col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-2 border border-gray-300  opacity-90 shadow backdrop-blur-lg backdrop-saturate-150 z-[9999] ">
+          <video src="./video/quizzapp.mp4" class="" controls muted loop></video>
+          <div class="  p-12 ">
+
+
+            <div class="flex flex-col gap-2">
+              <h5 class="text-2xl">StoreFront App</h5>
+              <h6 class="text-xl font-semibold">MEAN Stack</h6>
+              <p class=" whitespace-normal text-wrap antialiased "> This is a point of sale application for a store.
+              </p>
+              <div class="flex gap-4">
+                <a href="https://github.com/ashutoshbibyan/storefront_api" target="__blank"
+                  class="card-link bg-green-800 text-white p-2 rounded-md">Git</a>
+                <a href="https://storefront-so4w.onrender.com" target="__blank"
+                  class="card-link bg-green-800 text-white p-2 rounded-md">Live Demo</a>
+              </div>
             </div>
           </div>
+        </div>
 
 
-          <div class="card bg-color m-2" style="width: 18rem;">
-            <video src="./video/resto.mp4" class="card-img-top" controls muted autoplay loop></video>
-            <div class="card-body">
-              <h5 class="card-title">Resto App </h5>
-              <h6 class="card-subtitle mb-2 text-muted">MEAN Stack , IONIC</h6>
-              <p class="card-text"> This is a restaurant management application where we can create menu , take order , 
+
+        <div
+          class="bg-sky-50 col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-2 border border-gray-300  opacity-90 shadow backdrop-blur-lg backdrop-saturate-150 z-[9999] ">
+          <video src="./video/resto.mp4" class="" controls muted loop></video>
+          <div class="  p-12 ">
+
+
+            <div class="flex flex-col gap-2">
+              <h5 class="text-2xl">Resto app</h5>
+              <h6 class="text-xl font-semibold">MEAN Stack , IONIC</h6>
+              <p class=" whitespace-normal text-wrap antialiased "> This is a restaurant management application where we
+                can create menu , take order ,
                 manage inventory.
               </p>
-              
-              <a href="https://restoapp.onrender.com/" target="__blank" class="card-link">Live Demo</a>
+              <div class="flex gap-4">
+
+                <a href="https://restoapp.onrender.com/" target="__blank"
+                  class="card-link bg-green-800 text-white p-2 rounded-md">Live Demo</a>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="card bg-color m-2" style="width: 18rem;">
-            <video src="./video/edr.mp4" class="card-img-top" controls muted autoplay loop></video>
 
-            <div class="card-body">
-              <h5 class="card-title">Edoc (FrontEnd)</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Angular, TypeScript , JavaScript , Css , Html</h6>
-              <p class="card-text">This is a online clinic management solution for doctors. Doctor can register
+
+
+
+        <div
+          class="bg-sky-50 col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-2 border border-gray-300  opacity-90 shadow backdrop-blur-lg backdrop-saturate-150 z-[9999] ">
+          <video src="./video/edr.mp4" class="" controls muted loop></video>
+          <div class="  p-12 ">
+
+
+            <div class="flex flex-col gap-2">
+              <h5 class="text-2xl">Edoc (FrontEnd)</h5>
+              <h6 class="text-xl font-semibold">Angular, TypeScript , JavaScript , Css , Html</h6>
+              <p class=" whitespace-normal text-wrap antialiased "> This is a online clinic management solution for
+                doctors. Doctor can register
                 add details and set their profile to accept online appointments.
               </p>
-              <a href="https://github.com/ashutoshbibyan/edoc_frontend" target="_blank" class="card-link">Git</a>
-              <a href="https://ashutoshbibyan.github.io/doc_appointment_live/" target="_blank" class="card-link">Live
-                Demo</a>
+              <div class="flex gap-4">
+                <a href="https://github.com/ashutoshbibyan/edoc_frontend" target="__blank"
+                  class="card-link bg-green-800 text-white p-2 rounded-md">Git</a>
+                <a href="https://ashutoshbibyan.github.io/doc_appointment_live/" target="__blank"
+                  class="card-link bg-green-800 text-white p-2 rounded-md">Live Demo</a>
+              </div>
             </div>
           </div>
+        </div>
 
 
-          <div class="card bg-color m-2" style="width: 18rem;">
-            <video src="./video/edr.mp4" class="card-img-top" controls muted autoplay loop></video>
 
-            <div class="card-body">
-              <h5 class="card-title">Edoc (BackEnd)</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Java , Spring Boot , Spring Data , MongoDb </h6>
-              <p class="card-text">This is the backend rest api for the clinic management web site. It
+
+
+        <div
+          class="bg-sky-50 col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-2 border border-gray-300  opacity-90 shadow backdrop-blur-lg backdrop-saturate-150 z-[9999] ">
+          <video src="./video/edr.mp4" class="" controls muted loop></video>
+          <div class="  p-12 ">
+
+
+            <div class="flex flex-col gap-2">
+              <h5 class="text-2xl">Edoc (BackEnd)</h5>
+              <h6 class="text-xl font-semibold">Java , Spring Boot , Spring Data , MongoDb</h6>
+              <p class=" whitespace-normal text-wrap antialiased "> This is the backend rest api for the clinic
+                management web site. It
                 is created using java and spring boot. It uses mongoDb as database .
               </p>
-              <a href="https://github.com/ashutoshbibyan/doctor_appointment_backend" target="__blank"
-                class="card-link">Git</a>
-              <!-- <a href="#" class="card-link">Live Demo</a> -->
+              <div class="flex gap-4">
+                <a href="https://github.com/ashutoshbibyan/doctor_appointment_backend" target="__blank"
+                  class="card-link bg-green-800 text-white p-2 rounded-md">Git</a>
+
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+
+    </div>
 
 
+    <div id="services" class="grid grid-cols-12 py-26 h-screen w-full">
+      <h1 class="col-span-12 self-center text-center w-full text-6xl ">Services I Offers</h1>
 
+      <div class="col-span-12 grid grid-cols-12  gap-6 text-center">
+        <div class="col-span-12 lg:col-span-3 bg-sky-50">
+
+          <div class="card-header py-3">
+            <h6 class="text-2xl font-bold ">Language</h6>
+          </div>
+          <div class="card-body">
+
+            <ul class="list-unstyled mt-3 mb-4">
+              <li class="my-2">Java</li>
+              <li class="my-2">JavaScript</li>
+              <li class="my-2">TypeScript </li>
+              <li class="my-2">Php </li>
+              <li class="my-2">C</li>
+              <li class="my-2">C++</li>
+            </ul>
+
+          </div>
 
         </div>
 
 
+        <div class="col-span-12 lg:col-span-3 bg-sky-50">
 
+          <div class="card-header py-3">
+            <h6 class="my-0 font-bold">DataBase</h6>
+          </div>
+          <div class="card-body">
 
+            <ul class="list-unstyled mt-3 mb-4">
+              <li class="my-2">Mysql</li>
+              <li class="my-2">MongoDb</li>
 
-
-
-      </div>
-
-      <div class="row  justify-content-center">
-
-        <a href="#skills" class="d-flex justify-content-center">
-          <img class="scroll d-sm-block d-md-none d-lg-none" src="/images/scroll.png" alt="scroll up" />
-        </a>
-
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-
-
-  <section id="skills" class="container-fluid ">
-
-
-    <div class="row min-vh-100 justify-content-center bg-color">
-
-
-
-
-      <div class="row justify-content-center align-items-center">
-
-
-        <div class="card-group text-center">
-          <div class="card">
-
-            <div class="card-header py-3">
-              <h6 class="my-0 fw-normal ">Language</h6>
-            </div>
-            <div class="card-body">
-
-              <ul class="list-unstyled mt-3 mb-4">
-                <li class="my-2">Java</li>
-                <li class="my-2">JavaScript</li>
-                <li class="my-2">TypeScript </li>
-                <li class="my-2">Php </li>
-                <li class="my-2">C</li>
-                <li class="my-2">C++</li>
-              </ul>
-
-            </div>
+            </ul>
 
           </div>
 
+        </div>
 
-          <div class="card">
 
-            <div class="card-header py-3">
-              <h6 class="my-0 fw-normal">DataBase</h6>
-            </div>
-            <div class="card-body">
+        <div class="col-span-12 lg:col-span-3 bg-sky-50">
 
-              <ul class="list-unstyled mt-3 mb-4">
-                <li class="my-2">Mysql</li>
-                <li class="my-2">MongoDb</li>
+          <div class="card-header py-3">
+            <h6 class="my-0 font-bold">Web &amp; Technologies</h6>
+          </div>
+          <div class="card-body">
 
-              </ul>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li class="my-2">Html</li>
+              <li class="my-2">JavaScript</li>
+              <li class="my-2">Css </li>
+              <li class="my-2">BootStrap </li>
+              <li class="my-2">Jquery</li>
+              <li class="my-2">Angular</li>
+              <li class="my-2">Spring Boot</li>
+              <li class="my-2">Hibernate</li>
+              <li class="my-2">NodeJS</li>
+              <li class="my-2">Express</li>
+              <li class="my-2">Ionic</li>
 
-            </div>
+            </ul>
 
           </div>
 
+        </div>
 
-          <div class="card">
+        <div class="col-span-12 lg:col-span-3 bg-sky-50">
 
-            <div class="card-header py-3">
-              <h6 class="my-0 fw-normal">Web &amp; Technologies</h6>
-            </div>
-            <div class="card-body">
-
-              <ul class="list-unstyled mt-3 mb-4">
-                <li class="my-2">Html</li>
-                <li class="my-2">JavaScript</li>
-                <li class="my-2">Css </li>
-                <li class="my-2">BootStrap </li>
-                <li class="my-2">Jquery</li>
-                <li class="my-2">Angular</li>
-                <li class="my-2">Spring Boot</li>
-                <li class="my-2">Hibernate</li>
-                <li class="my-2">NodeJS</li>
-                <li class="my-2">Express</li>
-                <li class="my-2">Ionic</li>
-
-              </ul>
-
-            </div>
-
+          <div class="card-header py-3 bg-accent-color">
+            <h6 class="my-0 fw-normal font-bold">Proficient</h6>
           </div>
+          <div class="card-body">
 
-          <div class="card">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li class="my-2 font-semibold">NodeJS</li>
+              <li class="my-2 font-semibold">Java</li>
+              <li class="my-2 font-semibold">Angular</li>
+              <li class="my-2 font-semibold">Spring Boot </li>
+              <li class="my-2 font-semibold">JavaScript </li>
+              <li class="my-2 font-semibold">Mysql</li>
+              <li class="my-2 font-semibold">Express</li>
 
-            <div class="card-header py-3 bg-accent-color">
-              <h6 class="my-0 fw-normal text-white">Proficient</h6>
-            </div>
-            <div class="card-body">
-
-              <ul class="list-unstyled mt-3 mb-4">
-                <li class="my-2">NodeJS</li>
-                <li class="my-2">Java</li>
-                <li class="my-2">Angular</li>
-                <li class="my-2">Spring Boot </li>
-                <li class="my-2">JavaScript </li>
-                <li class="my-2">Mysql</li>
-                <li class="my-2">Express</li>
-
-              </ul>
-
-            </div>
+            </ul>
 
           </div>
 
@@ -313,126 +307,148 @@
 
       </div>
 
-
-      <div class="row  justify-content-center">
-
-        <a href="#certification" class="d-flex justify-content-center">
-          <img class="scroll d-sm-block d-md-none d-lg-none" src="/images/scroll.png" alt="scroll up" />
-        </a>
-
-
-
-      </div>
-
-
-
     </div>
 
+    <div id="experience" class=" flex justify-center py-26 h-screen ">
 
-  </section>
+      <section class="min-h-screen bg-gray-50 px-6 py-16">
+      <h1 class="col-span-12 self-center text-center w-full text-6xl mb-24">My Journey....</h1>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
+          <!-- Timeline (Left) -->
+          <div class="relative md:col-span-1">
+            <div class="border-l-4 border-blue-600 absolute h-full left-5 top-0"></div>
+            <ul class="space-y-12">
+              <!-- Item 1 -->
+              <li class="relative pl-12">
+                <div class="w-6 h-6 bg-blue-600 rounded-full absolute left-0 top-1"></div>
+                <h3 class="text-lg font-semibold text-gray-800">2022 – Present</h3>
+                <p class="text-sm text-gray-500">Fullstack Developer</p>
+              </li>
+              <!-- Item 2 -->
+              <li class="relative pl-12">
+                <div class="w-6 h-6 bg-blue-600 rounded-full absolute left-0 top-1"></div>
+                <h3 class="text-lg font-semibold text-gray-800">2020 – 2022</h3>
+                <p class="text-sm text-gray-500">Freelancer</p>
+              </li>
+              <!-- Item 3 -->
+              <li class="relative pl-12">
+                <div class="w-6 h-6 bg-blue-600 rounded-full absolute left-0 top-1"></div>
+                <h3 class="text-lg font-semibold text-gray-800">2018 – 2020</h3>
+                <p class="text-sm text-gray-500">Student / Intern</p>
+              </li>
+            </ul>
+          </div>
 
-  <section id="certification" class="container-fluid">
-
-    <div class="row min-vh-100 justify-content-center">
-
-
-
-
-      <div class="row justify-content-around align-items-center">
-
-        <div class="col-md-4 mb-4 d-flex justify-content-center ">
-
-          <div class="card  text-center bg-color" style="width: 18rem;">
-            <div class="card-body">
-              <h6 class="card-title">Diploma In Java</h6>
-
-              <p class="card-text text-muted">
-                Completed the 246 hours duration course at NIIT kurukshetra.
-
+          <!-- Details (Right) -->
+          <div class="md:col-span-2 space-y-12">
+            <!-- Role 1 -->
+            <div class="p-6 bg-white rounded-xl shadow-md">
+              <h4 class="text-xl font-semibold text-gray-800">Fullstack Developer @ qubitMindTechnology</h4>
+              <p class="mt-2 text-gray-600">
+                Worked on building MEAN stack applications, POS systems, LMS tools , and Moodle plugins.
+                Learned to structure scalable projects and collaborate with agile teams.
               </p>
-             
-              <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#modeljava">View</a>
+              <p class="mt-2 italic text-gray-500">“Building real-world apps taught me the importance of clean code and
+                teamwork.”</p>
+            </div>
 
-              <div id="modeljava" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-                aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <img src="/images/javacertificate_comp.jpg" alt="java certification">
-                  </div>
-                </div>
-              </div>
+            <!-- Role 2 -->
+            <div class="p-6 bg-white rounded-xl shadow-md">
+              <h4 class="text-xl font-semibold text-gray-800">Freelancer</h4>
+              <p class="mt-2 text-gray-600">
+                Handled multiple freelance projects including e-commerce sites and educational platforms.
+                Managed client communication and deadlines independently.Worked on the php and java mostly explored different tech stacks
+                according to different clients.
+              </p>
+              <p class="mt-2 italic text-gray-500">“This phase taught me how to manage clients and projects end-to-end.”
+              </p>
+            </div>
 
+            <!-- Role 3 -->
+            <div class="p-6 bg-white rounded-xl shadow-md">
+              <h4 class="text-xl font-semibold text-gray-800">Intern(Syndtech Technologies)</h4>
+              <p class="mt-2 text-gray-600">
+                Learned core web development, experimented with frameworks, and studied java and its development like framework springboot.
+              </p>
+              <p class="mt-2 italic text-gray-500">“The foundation years gave me curiosity to keep learning every day.”
+              </p>
             </div>
           </div>
-
-
-
         </div>
+      </section>
 
-        <div class="col-md-4 mb-4 d-flex justify-content-center">
+    </div>
 
-          <div class="card text-center bg-color" style="width: 18rem;">
-            <div class="card-body">
-              <h6 class="card-title">Programming In C</h6>
+    <div id="contact" class="grid grid-cols-12 py-26 h-screen w-full">
 
-              <p class="card-text text-muted">Completed the 36 hours duration course at NIIT kurukshetra.</p>
-              <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#modelc">View</a> 
 
-              <div id="modelc" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-                aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <img src="/images/ccertificate_comp.jpg" alt="java certification">
-                  </div>
-                </div>
-              </div>
+      <section class="col-span-12 min-h-screen flex flex-col items-center justify-center bg-gray-50 ">
 
-            </div>
+        <h1 class=" self-center text-center w-full text-6xl "> Let’s work together</h1>
+
+        <div class="max-w-3xl w-full bg-white shadow-xl rounded-2xl p-8">
+          <!-- Heading -->
+          <div class="mb-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-800">Get in Touch</h2>
+            <p class="mt-2 text-gray-600">
+              Have a project in mind or just want to say hi? Fill out the form and I’ll get back to you soon.
+            </p>
           </div>
 
+          <!-- Contact Form -->
+          <form action="https://formspree.io/f/xvgbljnr" method="POST" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" name="name" id="name" required
+                class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" name="email" id="email" required
+                class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+              <input type="text" name="subject" id="subject"
+                class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea name="message" id="message" rows="5" required
+                class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-200">
+              Send Message
+            </button>
+          </form>
+
+          <!-- Social Links -->
+          <div class="mt-10 text-center">
+            <p class="text-gray-600">Or reach me directly:</p>
+            <div class="flex justify-center space-x-6 mt-4">
+              <a href="mailto:ashutosh2013official@gmail.com" class="text-gray-500 hover:text-blue-600">📧</a>
+              <a href="https://github.com/ashutoshbibyan" target="_blank"
+                class="text-gray-500 hover:text-blue-600">🐙</a>
+              <a href="https://linkedin.com/in/yourusername" target="_blank"
+                class="text-gray-500 hover:text-blue-600">💼</a>
 
 
-        </div>
-
-
-        <div class="col-md-4 mb-4 d-flex justify-content-center">
-
-          <div class="card text-center bg-color" style="width: 18rem;">
-            <div class="card-body">
-              <h6 class="card-title">Programming In C++</h6>
-
-              <p class="card-text text-muted">Completed the 36 hours duration course at NIIT kurukshetra.</p>
-              <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#modelcplus">View</a>
-
-              <div id="modelcplus" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-                aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <img src="/images/c++certificate_comp.jpg" alt="C++ certification" />
-                  </div>
-                </div>
-              </div>
-
-
-
+              <p class="flex"><svg class="w-6 h-6 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M5 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4Zm12 12V5H7v11h10Zm-5 1a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z"
+                    clip-rule="evenodd" />
+                </svg>+91 8168092721</p>
             </div>
           </div>
-
-
-
         </div>
-
-      </div>
-
-      <div class="row  justify-content-center">
-
-        <a href="#contact" class="d-flex justify-content-center">
-          <img class="scroll d-sm-block d-md-none d-lg-none" src="/images/scroll.png" alt="scroll up" />
-        </a>
-
-
-      </div>
+      </section>
 
 
     </div>
@@ -440,119 +456,9 @@
 
 
 
-  </section>
-
-
-  <section id="contact" class="container-fluid bg-color ">
-
-
-    <div class="row min-vh-100 justify-content-center align-items-center">
-
-
-
-
-    <div id="contact-container" class="w-50 bg-white justify-content-center align-items-center text-center ">
-
-          
-          <img class="p-4 contact-img" src="/images/phone.svg" />
-          <h6 class=" p-4 ">8168092721</h6>
-          <img class="p-4 contact-img" src="/images/envelope-fill.svg" />
-          <h6 class=" p-4 ">ashutosh2013official@gmail.com</h6>
-          <img class="p-4 contact-img" src="/images/github.svg" />
-          <h6 class=" p-4 "><a href="https://github.com/ashutoshbibyan" target="__blank">Check Out Git</a></h6>
-          <img class="p-4 contact-img" src="/images/stack-overflow.svg" />
-          <h6 class=" p-4 "><a href="https://stackoverflow.com/users/6395760/ashutosh" target="__blank">Check StackOverflow</a></h6>
-  
-          <p class="text-center text-muted">© 2019 ashutosh</p>
-    </div>
-      
-
-
-
-
-
-
-
-
-
-
-  </section>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-
-        </div>
-        <div class="modal-body">
-          <h6>About</h6>
-          <p>
-            Hello, I'm ashutosh, a passionate and innovative software developer dedicated to crafting
-            high-quality digital solutions. With a strong foundation in the world of technology,
-            I'm on a mission to turn ideas into powerful, user-friendly applications.
-          </p>
-
-          <h6> My Journey </h6>
-          <p>My journey in the software development industry began with a fascination for creating
-            solutions to real-world problems. Over the years, I've honed my skills and gained hands-on
-            experience in a variety of technology stacks, including java , spring boot , php , node js , angular
-            . I'm continually seeking opportunities to learn and adapt to
-            emerging technologies.
-          </p>
-
-
-          <h6>What I Do</h6>
-          <p>I specialize in Web development although i have worked on diffenet technologies, and I take pride in
-            developing
-            elegant and efficient solutions. Whether it's crafting an intuitive user
-            interface or architecting a robust backend, I'm committed to delivering
-            results that exceed expectations.
-          </p>
-
-
-          <h6>Why Choose Me</h6>
-          <p>What sets me apart is my dedication to delivering not just code but real value.
-            I take the time to understand your unique requirements and objectives,
-            working closely with you to tailor solutions that meet your specific needs.
-            My commitment to clean, well-documented code ensures that your project is
-            maintainable and scalable.
-          </p>
-
-
-          <h6>Let's Collaborate</h6>
-
-          <p>I'm always excited to take on new challenges and embark on creative
-            journeys with forward-thinking clients and collaborators.
-            If you have a project in mind or are looking for a software developer
-            who's ready to bring your ideas to life, feel free to get in touch.
-            I'd love to hear from you and explore how we can work together to make your vision a reality.
-          </p>
-
-          <span> Thank you for visiting my portfolio, and I look forward to the opportunity to work together.
-          </span>
-        </div>
-        <div class="modal-footer">
-
-        </div>
-      </div>
-    </div>
   </div>
 
-  
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-
-  <script src="./js/index.js" type="text/JavaScript"></script>
 
 </body>
+
+</html>
