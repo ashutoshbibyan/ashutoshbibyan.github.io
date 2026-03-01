@@ -44,6 +44,7 @@
         </ul>
       </div>
       <button
+      id="menu-btn"
         class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
         type="button">
         <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
@@ -52,7 +53,20 @@
           </svg>
         </span>
       </button>
+
+      
     </div>
+
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden mt-4 px-4">
+    <ul class="flex flex-col gap-4 text-slate-800">
+      <li><a href="#work" class="hover:font-bold">Work</a></li>
+      <li><a href="#services" class="hover:font-bold">Services</a></li>
+      <li><a href="#experience" class="hover:font-bold">Experience</a></li>
+      <li><a href="#contact" class="hover:font-bold">Contact</a></li>
+    </ul>
+  </div>
   </nav>
 
   <div class="">
@@ -73,12 +87,14 @@
             Experience</h2>
         </div>
       </div>
-      <div class="col-span-12 lg:col-span-6 flex flex-col justify-center lg:justify-around hidden lg:block">
-        <h2 class="text-xl antialiased text-center whitespace-normal  "> "I create functional and beautiful
+      <div class="col-span-12 lg:col-span-6  hidden lg:flex ">
+        <div class="lg:flex  flex-col justify-center lg:justify-around w-full h-auto md:h-full mt-12 lg:mt-0">
+          <h2 class="text-xl antialiased text-center whitespace-normal  "> "I create functional and beautiful
           <br>applications and I love what i do "
         </h2>
         <h2 class="text-xl text-center ">FullStack Software Developer</h2>
 
+        </div>
       </div>
 
     </div>
@@ -458,6 +474,14 @@
 
   </div>
 
+  <script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
 
 </body>
 
