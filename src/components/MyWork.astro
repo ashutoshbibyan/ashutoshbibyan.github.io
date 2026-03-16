@@ -1,0 +1,105 @@
+
+    
+  <div id="viewport" class="  w-full relative">
+
+
+
+   <div id="work" class="min-h-screen  py-20 px-6">
+    
+
+  <h1 class="text-center text-4xl md:text-6xl font-bold text-slate-800 mb-16">Some Of My Work</h1>
+
+  
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 grid-rows-auto gap-4">
+    
+    <div class="work-card md:col-span-2 md:row-span-2 bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-end min-h-[400px]">
+       
+        <div class="mt-auto">
+        
+        <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">MEAN Stack </h6>
+        <div class="flex gap-4 items-end">
+          <h5 class="text-3xl font-bold text-white mt-2">Nexus POS</h5>
+          <a href="https://nexuspos.technove24.info" target="_blank" class="bg-yellow-500 p-2 mt-4">LiveDemo</a>
+
+        </div>
+        <p class="text-slate-400 mt-4">
+          This is an POS solution for stores where we can add products and manage the billing for them we can also register different type of users for 
+          billing and other tasks.
+        </p>
+        
+      </div>
+    </div>
+
+    <div class="work-card md:col-span-2 bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-center">
+      <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">Angular / TypeScript / JavaScript / Css / Html</h6>
+      <h5 class="text-2xl font-bold text-white mt-1">Doctor Management System</h5>
+      <p class="text-slate-400 mt-2">This is a online clinic management solution for
+                doctors. Doctor can register
+                add details and set their profile to accept online appointments.</p>
+    </div>
+
+    <div class="work-card bg-slate-900 border border-slate-800 rounded-3xl p-8">
+      <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">Java / Spring Boot / Spring Data / MongoDb</h6>
+      <h5 class="text-xl font-bold text-white mt-1">Doctor Management Backedn</h5>
+      <p class="text-slate-400 mt-2 text-sm">This is the backend rest api for the clinic management web site. It
+                is created using java and spring boot. It uses mongoDb as database .</p>
+    </div>
+
+    <div class="work-card bg-slate-900 border border-slate-800 rounded-3xl p-8">
+      <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">MEAN STACK</h6>
+      <h5 class="text-xl font-bold text-white mt-1">Quizz App</h5>
+      <p class="text-slate-400 mt-2 text-sm">This is a quiz application created using the MEAN
+                Stack.Here you can create question
+                for quiz
+                and also take part in quiz.</p>
+    </div>
+
+    <div class="work-card md:row-span-2 bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col">
+       <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">Php Laravel</h6>
+       <h5 class="text-2xl font-bold text-white mt-1">Ecommerce</h5>
+       <p class="text-slate-400 mt-4 flex-grow">This is an ecommerse site based on php laravel</p>
+    </div>
+
+    <div class="work-card md:col-span-3 bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col md:flex-row items-center gap-6">
+      <div class="flex-1">
+        <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">MEAN STACK / ICONIC</h6>
+        <div class="flex gap-4 items-end">
+          <h5 class="text-3xl font-bold text-white mt-2">Resto App</h5>
+          <a href="https://resto.technove24.info" target="_blank" class="bg-yellow-500 p-2 mt-4">LiveDemo</a>
+
+        </div>
+        <p class="text-slate-400 mt-2">This is a point of sale application for a restaurant 
+          .It has feature like inventory management menu creation and taking order and also 
+        handling the status of orders.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    
+    // Don't forget to register the plugin!
+    gsap.registerPlugin(ScrollTrigger);
+
+    window.addEventListener('load', () => {
+        // Animate cards only when the section is reached
+        gsap.from(".work-card", {
+            scrollTrigger: {
+                trigger: "#work",      // The animation starts when this ID enters the view
+                start: "top 80%",      // Starts when the top of the section hits 80% of the screen height
+                toggleActions: "play none none none" // Plays once and stays there
+            },
+            y: 100,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2, 
+            ease: "power4.out"
+        });
+
+    });
+</script>

@@ -1,0 +1,92 @@
+---
+import '../styles/global.css';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+    <div id="contact" class="grid grid-cols-12 py-26 md:h-screen w-full">
+
+
+      <section class="col-span-12 min-h-screen flex flex-col items-center justify-center bg-gray-50 ">
+
+        <h1 class=" self-center text-center w-full text-4xl md:text-6xl "> Let’s work together</h1>
+
+        <div class="max-w-3xl w-full bg-white shadow-xl rounded-2xl p-8">
+          <!-- Heading -->
+          <div class="mb-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-800">Get in Touch</h2>
+            <p class="mt-2 text-gray-600">
+              Have a project in mind or just want to say hi? Fill out the form and I’ll get back to you soon.
+            </p>
+          </div>
+
+          <!-- Contact Form -->
+          <form action="https://formspree.io/f/xvgbljnr" method="POST" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" name="name" id="name" required
+                class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" name="email" id="email" required
+                class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+              <input type="text" name="subject" id="subject"
+                class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea name="message" id="message" rows="5" required
+                class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-200">
+              Send Message
+            </button>
+          </form>
+
+          <!-- Social Links -->
+          <div class="mt-10 text-center">
+            <p class="text-gray-600">Or reach me directly:</p>
+            <div class="flex justify-center space-x-6 mt-4">
+              <a href="mailto:ashutosh2013official@gmail.com" class="text-gray-500 hover:text-blue-600">📧</a>
+              <a href="https://github.com/ashutoshbibyan" target="_blank"
+                class="text-gray-500 hover:text-blue-600">🐙</a>
+              <a href="https://linkedin.com/in/yourusername" target="_blank"
+                class="text-gray-500 hover:text-blue-600">💼</a>
+
+
+              <p class="flex"><svg class="w-6 h-6 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M5 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4Zm12 12V5H7v11h10Zm-5 1a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z"
+                    clip-rule="evenodd" />
+                </svg>+91 8168092721</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+
+  
+		<Footer />
+	</body>
+</html>

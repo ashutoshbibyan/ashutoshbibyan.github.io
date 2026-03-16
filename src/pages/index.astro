@@ -1,0 +1,135 @@
+---
+import '../styles/global.css';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import MyJourney from '../components/MyJourney.astro';
+import MyWork from '../components/MyWork.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+
+    <style>
+  /* Blinking cursor effect */
+  .cursor {
+    display: inline-block;
+    width: 3px;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+</style>
+		
+  <section class="h-screen">
+     <div class="grid lg:grid-cols-12 bg-[url(./dev_working.jpg)]  bg-no-repeat bg-center bg-contain 
+      sm:bg-cover md:bg-cover lg:bg-contain h-full">
+      <div class="w-full md:col-start-2 lg:col-start-1 col-span-12 md:col-span-6">
+        <div class="flex flex-col h-auto mx-6 md:h-full  mt-12 lg:mt-0 lg:justify-around gap-2 w-fit lg:mx-auto">
+
+           <h1 id="title" class="text-4xl md:text-5xl lg:text-6xl text-sky-900 font-bold">
+          Hey There, <br /> I'm <span class="text-sky-600">Ashutosh</span>
+        </h1>
+          <p id="mob-subtitle" class="text-sm font-thin lg:hidden">
+            
+            <span id="typewriter" class="text-gray-900 font-medium font-mono"></span>
+            <span class="cursor">|</span>
+           
+           
+          </p>
+          <h2 class="font-bold text-sky-900 hidden lg:block "><a
+              href="mailto:ashutosh2013official@gmail.com">ashutosh2013official@gmail.com</a></h2>
+          <div class="experience-badge hidden lg:block">
+          <span class="text-6xl font-black text-sky-900">5</span>
+          <span class="text-xl text-slate-500 uppercase tracking-widest ml-2">Years Exp</span>
+        </div>
+        </div>
+      </div>
+      <div class="col-span-12 lg:col-span-6  hidden lg:flex ">
+        <div class="lg:flex  flex-col justify-center lg:justify-around w-full h-auto md:h-full mt-12 lg:mt-0">
+          <h2 class="text-xl antialiased text-center whitespace-normal  ">
+             "I create functional and beautiful
+          <br>applications and I love what i do "
+        </h2>
+        <h2 class="text-xl text-center ">FullStack Software Developer</h2>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="experience">
+    <MyJourney />
+  </section>
+  
+  <section  id="work" class="">
+    <MyWork />
+  </section>
+
+  <section id="contact">
+    <Contact />
+  </section>
+
+  <section>
+    <Footer />
+  </section>
+
+    <script>
+      import {gsap} from 'gsap';
+      import { TextPlugin } from 'gsap/TextPlugin'; // 1. Import the plugin
+
+
+      gsap.registerPlugin(TextPlugin);
+
+      window.addEventListener('load',()=>{
+
+      const timeline = gsap.timeline();
+
+      const mobSubtitle = `I’m a Full-Stack Developer with 5 years of experience building
+            scalable and user-friendly applications. Skilled in the MEAN stack, Java, and PHP, I create efficient
+            backend systems and seamless frontend experiences. I enjoy turning ideas into functional, high-quality
+            software.`;
+
+      
+
+   
+     
+      timeline.from('#title',{ // Add this class to your '5 year' section
+          scale: 0.5,
+          opacity: 0,
+          duration: 0.5,
+          ease: "back.out(1.7)"
+        })
+      .from(".experience-badge", { // Add this class to your '5 year' section
+          scale: 0.5,
+          opacity: 0,
+          duration: 0.5,
+          ease: "back.out(1.7)"
+        })
+      .to("#typewriter", {
+        duration: 12,
+        text: mobSubtitle, // The text to type
+        ease: "none",
+      });
+     
+      })
+    
+    
+     
+
+     
+      
+    </script>
+	</body>
+</html>
