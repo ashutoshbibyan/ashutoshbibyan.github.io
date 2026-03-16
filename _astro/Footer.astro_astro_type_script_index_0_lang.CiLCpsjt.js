@@ -1,0 +1,1 @@
+import{g as e}from"./index.CB87Sc6I.js";window.addEventListener("load",()=>{e.from("#mobile-dock",{y:100,opacity:0,duration:1,delay:.5,ease:"power4.out"}),document.querySelectorAll(".dock-link").forEach(o=>{o.addEventListener("click",()=>{e.to(o,{scale:1.2,duration:.1,yoyo:!0,repeat:1})})})});

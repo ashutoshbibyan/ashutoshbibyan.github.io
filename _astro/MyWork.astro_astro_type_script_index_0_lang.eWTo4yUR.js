@@ -1,0 +1,1 @@
+import{g as r}from"./index.CB87Sc6I.js";import{S as o}from"./ScrollTrigger.Cv03IO65.js";r.registerPlugin(o);window.addEventListener("load",()=>{r.from(".work-card",{scrollTrigger:{trigger:"#work",start:"top 80%",toggleActions:"play none none none"},y:100,opacity:0,duration:.8,stagger:.2,ease:"power4.out"})});

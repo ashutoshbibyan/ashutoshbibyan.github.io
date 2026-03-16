@@ -1,0 +1,1 @@
+import{g as a}from"./index.CB87Sc6I.js";a.from(".work-card",{y:100,opacity:0,duration:.8,stagger:.2,ease:"power4.out"});a.from("#tech-stack div",{opacity:0,scale:.95,y:10,stagger:.1,duration:.6,ease:"power2.out"});
