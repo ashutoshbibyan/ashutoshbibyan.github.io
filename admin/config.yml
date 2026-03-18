@@ -2,6 +2,7 @@ backend:
   name: github
   repo: ashutoshbibyan/ashutoshbibyan.github.io # Update this!
   branch: decap-cms-init
+  base_url: https://decap-cms-oss-proxy.vercel.app # This is a common community proxy
 
 # Use the paths relative to the root of your GITHUB REPO
 media_folder: "src/assets/images/blog" 
