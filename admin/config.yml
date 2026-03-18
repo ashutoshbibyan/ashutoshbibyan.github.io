@@ -3,9 +3,9 @@ backend:
   repo: ashutoshbibyan/ashutoshbibyan.github.io # Update this!
   branch: decap-cms-init
 
-# These MUST be at the root level, not indented
-media_folder: "src/assets/images/blog"
-public_folder: "../../assets/images/blog"
+# Use the paths relative to the root of your GITHUB REPO
+media_folder: "src/assets/images/blog" 
+public_folder: "/src/assets/images/blog" # Absolute path from site root
 
 collections:
   - name: "blog"
