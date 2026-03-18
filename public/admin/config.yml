@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: ashutoshbibyan/ashutoshbibyan.github.io # Update this!
+  branch: decap-cms-init
+
+# These MUST be at the root level, not indented
+media_folder: "src/assets/images/blog"
+public_folder: "../../assets/images/blog"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Featured Image", name: "heroImage", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
