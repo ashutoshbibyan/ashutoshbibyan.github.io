@@ -3,7 +3,7 @@ name: Deploy Astro to GitHub Pages
 on:
   push:
     branches:
-      - astro-version  # deploy on pushes to main branch
+      - decap-cms-init  # deploy on pushes to main branch
 
 jobs:
   build-and-deploy:
