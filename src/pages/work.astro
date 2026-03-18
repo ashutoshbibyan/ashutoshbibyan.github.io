@@ -1,0 +1,113 @@
+---
+import '../styles/global.css';
+
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+
+<div class="absolute top-20 left-10 opacity-10 pointer-events-none">
+    <h1 class="text-[5rem] lg:text-[15rem] font-black uppercase text-slate-900">Work</h1>
+    </div>
+
+    
+
+
+
+
+   <div id="work" class="min-h-screen  py-20 px-6">
+  <h1 class="text-center text-4xl md:text-6xl font-bold text-slate-800 mb-16">Some Of My Work</h1>
+
+  
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 grid-rows-auto gap-4">
+    
+    <div class="work-card md:col-span-2 md:row-span-2 bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-end min-h-[400px]">
+       
+        <div class="mt-auto">
+        
+        <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">MEAN Stack / IONIC</h6>
+        <h5 class="text-3xl font-bold text-white mt-2">Restaurent POS</h5>
+        <p class="text-slate-400 mt-4">This is a restaurant management application where we can create menu , take order , 
+            manage inventory. The frondend is developed using IONIC framework so this project is capable of android an ios application the backend is 
+        writen using express js and mongodb as backend </p>
+      </div>
+    </div>
+
+    <div class="work-card md:col-span-2 bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-center">
+      <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">Angular / TypeScript / JavaScript / Css / Html</h6>
+      <h5 class="text-2xl font-bold text-white mt-1">Doctor Management System</h5>
+      <p class="text-slate-400 mt-2">This is a online clinic management solution for
+                doctors. Doctor can register
+                add details and set their profile to accept online appointments.</p>
+    </div>
+
+    <div class="work-card bg-slate-900 border border-slate-800 rounded-3xl p-8">
+      <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">Java / Spring Boot / Spring Data / MongoDb</h6>
+      <h5 class="text-xl font-bold text-white mt-1">Doctor Management Backedn</h5>
+      <p class="text-slate-400 mt-2 text-sm">This is the backend rest api for the clinic management web site. It
+                is created using java and spring boot. It uses mongoDb as database .</p>
+    </div>
+
+    <div class="work-card bg-slate-900 border border-slate-800 rounded-3xl p-8">
+      <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">MEAN STACK</h6>
+      <h5 class="text-xl font-bold text-white mt-1">Quizz App</h5>
+      <p class="text-slate-400 mt-2 text-sm">This is a quiz application created using the MEAN
+                Stack.Here you can create question
+                for quiz
+                and also take part in quiz.</p>
+    </div>
+
+    <div class="work-card md:row-span-2 bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col">
+       <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">Subtitle</h6>
+       <h5 class="text-2xl font-bold text-white mt-1">Tall Layout</h5>
+       <p class="text-slate-400 mt-4 flex-grow">Great for projects with long vertical screenshots or mobile-first apps.</p>
+    </div>
+
+    <div class="work-card md:col-span-3 bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col md:flex-row items-center gap-6">
+      <div class="flex-1">
+        <h6 class="text-sky-400 font-mono text-sm uppercase tracking-widest">MEAN STACK</h6>
+        <h5 class="text-2xl font-bold text-white mt-1">StoreFront App</h5>
+        <p class="text-slate-400 mt-2">This is a point of sale application for a store.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+   	<Footer />
+
+    <script>
+        import { gsap } from "gsap";
+
+// Animate cards floating up one by one
+gsap.from(".work-card", {
+  y: 100,
+  opacity: 0,
+  duration: 0.8,
+  stagger: 0.2, // This creates the "waterfall" effect
+  ease: "power4.out"
+});
+
+// Add this to your Work Page script
+gsap.from("#tech-stack div", {
+  opacity: 0,
+  scale: 0.95,
+  y: 10,
+  stagger: 0.1,
+  duration: 0.6,
+  ease: "power2.out"
+});
+    </script>
+	</body>
+</html>

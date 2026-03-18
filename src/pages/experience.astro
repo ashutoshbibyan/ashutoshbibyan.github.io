@@ -1,0 +1,157 @@
+---
+import '../styles/global.css';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+
+
+
+  <div id="viewport" class="overflow-hidden h-screen w-full relative">
+    <div class="absolute top-20 left-10 opacity-10 pointer-events-none">
+    <h1 class="text-[5rem] lg:text-[15rem] font-black uppercase text-slate-900">Career</h1>
+    </div>
+  
+  <div id="content-train" class="flex w-[300vw] h-full items-center relative">
+    
+    <svg class="absolute top-0 left-0 w-full h-full pointer-events-none" viewBox="0 0 3000 500" preserveAspectRatio="none">
+      <path 
+        d="M0,250 Q750,100 1500,250 T3000,250" 
+        fill="none" 
+        stroke="#1e293b" 
+        stroke-width="4" 
+      />
+      <path 
+        id="svg-path"
+        d="M0,250 Q750,100 1500,250 T3000,250" 
+        fill="none" 
+        stroke="#38bdf8" 
+        stroke-width="6" 
+        stroke-linecap="round"
+        filter="drop-shadow(0 0 8px #38bdf8)"
+      />
+    </svg>
+
+    <div class="station w-[100vw] h-full flex flex-col items-center justify-center relative">
+      <div class="absolute top-[45%]">
+        <h2 class="text-3xl font-bold text-sky-800">2018 – 2020</h2>
+      </div>
+
+      <div class="dot w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-md z-10"></div>
+
+      <div class="absolute top-[55%] w-[300px] lg:w-[600px] p-6 bg-slate-900 border border-slate-800 rounded-3xl text-white rounded-xl shadow-lg border border-gray-100">
+
+       
+              <h4 class="text-xl font-semibold ">Intern(Syndtech Technologies)</h4>
+              <p class="mt-2 font-light ">
+                Learned core web development, experimented with frameworks, and studied java and its development like framework springboot.
+              </p>
+              <p class="mt-2 italic font-light">“The foundation years gave me curiosity to keep learning every day.”
+              </p>
+           
+        
+      </div>
+    </div>
+
+    <div class="station w-[100vw] h-full flex flex-col items-center justify-center relative">
+      <div class="absolute top-[45%]">
+        <h2 class="text-3xl font-bold text-sky-800">2020 – 2022</h2>
+      </div>
+      <div class="dot w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-md z-10"></div>
+      <div class="absolute top-[55%] w-[300px] lg:w-[600px] p-6 bg-slate-900 border border-slate-800 rounded-3xl text-white rounded-xl shadow-lg border border-gray-100">
+         <h4 class="text-xl font-semibold">Freelancer</h4>
+              <p class="mt-2  font-light">
+                Handled multiple freelance projects including e-commerce sites and educational platforms.
+                Managed client communication and deadlines independently.Worked on the php and java mostly explored different tech stacks
+                according to different clients.
+              </p>
+              <p class="mt-2 italic  font-light">“This phase taught me how to manage clients and projects end-to-end.”
+      </div>
+    </div>
+
+    <div class="station w-[100vw] h-full flex flex-col items-center justify-center relative">
+      <div class="absolute top-[45%]">
+        <h2 class="text-3xl font-bold text-sky-800">2022 – Present</h2>
+      </div>
+      <div class="dot w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-md z-10"></div>
+      <div class="absolute top-[55%] w-[300px] lg:w-[600px] p-6 bg-slate-900 border border-slate-800 rounded-3xl text-white rounded-xl shadow-lg border border-gray-100">
+              <h4 class="text-xl font-semibold">Fullstack Developer @ qubitMindTechnology</h4>
+              <p class="mt-2 font-light ">
+                Worked on building MEAN stack applications, POS systems, LMS tools , and Moodle plugins.
+                Learned to structure scalable projects and collaborate with agile teams.
+              </p>
+              <p class="mt-2 italic  font-light">“Building real-world apps taught me the importance of clean code and
+                teamwork.”</p>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="absolute bottom-5 lg:bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-4 text-sky-500/50">
+        <span class="text-xs font-mono">2018</span>
+        <div class="w-48 h-[2px] bg-slate-800 relative">
+            <div id="progress-bar" class="absolute top-0 left-0 h-full bg-sky-500 w-0"></div>
+        </div>
+        <span class="text-xs font-mono">Present</span>
+    </div>
+</div>
+
+
+		<Footer />
+
+        <script>
+         import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+window.addEventListener('load', () => {
+  const train = document.querySelector("#content-train");
+  const scrollAmount = train.offsetWidth - window.innerWidth;
+  
+
+  // 1. The main "Slide & Line" Timeline
+  const mainTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#viewport",
+      pin: true,
+      scrub: 1,
+      start: "top top",
+      end: `+=${scrollAmount * 1.5}`, // Adding length for a slower, smoother scroll
+    }
+  });
+
+  mainTl.to(train, { x: -scrollAmount, ease: "none" }, 0);
+  mainTl.to("#horizontal-line", { scaleX: 1, ease: "none" }, 0);
+  mainTl.to("#progress-bar", { width: "100%", ease: "none" }, 0);
+
+  // 2. The "Pop" effect for each station
+  gsap.utils.toArray(".station").forEach((station) => {
+    const dot = station.querySelector(".dot");
+    const card = station.querySelector(".station > div:last-child");
+
+    gsap.from([dot, card], {
+      scale: 0.8,
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: station,
+        containerAnimation: mainTl, // THIS is the secret for horizontal triggering
+        start: "left center",       // When the station's left side hits the center
+        toggleActions: "play none none reverse",
+      }
+    });
+  });
+});
+        </script>
+	</body>
+</html>
