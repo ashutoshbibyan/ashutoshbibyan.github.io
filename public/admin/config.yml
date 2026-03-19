@@ -1,8 +1,10 @@
 backend:
   name: github
-  repo: ashutoshbibyan/ashutoshbibyan.github.io # Update this!
+  repo: ashutoshbibyan/ashutoshbibyan.github.io
   branch: decap-cms-init
-  base_url: decap-cms-oauth.ashutosh2013official.workers.dev # This is a common community proxy
+  # Make sure "https://" is at the very beginning!
+  base_url: https://decap-cms-oauth.ashutosh2013official.workers.dev 
+  auth_endpoint: /auth
 
 # Use the paths relative to the root of your GITHUB REPO
 media_folder: "src/assets/images/blog" 
