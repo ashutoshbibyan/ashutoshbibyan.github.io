@@ -1,13 +1,19 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <link href="config.yml" type="text/yaml" rel="cms-config-url" />
-    <title>Content Manager</title>
-  </head>
-  <body>
-    <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
-  </body>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Content Manager</title>
+</head>
+<body>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // This helper "pings" the popup to say "I am ready for the token"
+    setInterval(() => {
+      const popup = window.open('', 'netlify-cms-auth');
+      if (popup && !popup.closed) {
+        popup.postMessage("authorizing:github", "*");
+      }
+    }, 1000);
+  </script>
+</body>
 </html>
